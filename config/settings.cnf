@@ -3,7 +3,7 @@
 installDir          = /etc/cert-gui/
 
 # Root directory of all certificate management
-certRootDir                = $installDir/certificates
+globalCertRootDir                = $installDir/certificates
 
 ###############################################################
 ### If you want to access a different certificate's values, ###
@@ -17,7 +17,7 @@ certRootDir                = $installDir/certificates
 # Default Directories
 # All settings will be inherited from here if they are left unset in later certificate definitions
 [int.0]
-certRootDir                 = $certRootDir/
+certRootDir                 = $globalCertRootDir/
 certPrivateKeysDir          = $certRootDir/keys
 certSignedFilesDir          = $certRootDir/certs
 certRequestsDir             = $certRootDir/csr
