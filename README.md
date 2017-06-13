@@ -6,6 +6,7 @@
 - Certificate management
 - Certificate signing
 - CSR generation
+- CSR signing
 - CRL generation & management
 - User-based authentication
 - Permissions-based certificate signing by user
