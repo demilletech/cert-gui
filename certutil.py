@@ -17,7 +17,7 @@ def genCSR(params):
 def signCSR(cn):
     csr = open(certsettings.settings['crlRequestsDir'] + cn + ".csr.pem")
     req = load_certificate_request(FILETYPE_PEM, csr)
-    params = genCSRParams(req)
+    params = getCSRParams(req)
     
     command = certconfig.cd + "; " + certconfig.signCSR + "; " + certconfig.signCSRPerms
     fcommand = certconfig.createCommand(command, params)
