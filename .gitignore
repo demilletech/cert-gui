@@ -106,4 +106,5 @@ ENV/
 .pem
 .csr
 
-cert-gui/*
+*/.idea/*
+.idea/*
