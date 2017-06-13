@@ -3,6 +3,7 @@
 
 ---
 **Features**
+
 - Certificate management
 - Certificate signing
 - CSR generation
@@ -13,14 +14,17 @@
 
 ---
 **Installation**
+
 I'm lazy
 
 
 ---
 **Usage**
+
 I'm lazy again
 
 
 ---
 **Support**
+
 For any questions, comments, or concerns, please use the built-in bug system.
