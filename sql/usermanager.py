@@ -12,10 +12,6 @@ def init(conn):
     _c = c
     _c.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER AUTO_INCREMENT, pass VARCHAR(200), uname VARCHAR(200), group INTEGER)')
 
-def loadUsers():
-    _c.execute('SELECT * FROM users')
-    ret = _c.fetchone()
-
 def getUserData():
     _c.execute('SELECT id, uname, group FROM users')
     return _c.fetchall()
