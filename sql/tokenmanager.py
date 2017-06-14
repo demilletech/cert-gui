@@ -28,3 +28,8 @@ def invalidateToken(tid):
 def getGroupData(gid):
     _c.execute('SELECT * FROM group WHERE id = ?', gid)
     return _c.fetchone()
+
+def isValidToken(uname, token):
+    vals = [uname, token]
+    _c.execute('SELECT valid FROM token WHERE userid = (SELECT id FROM user WHERE uname = ?) AND token = ?', vals)
+    return _c.fetchone()
