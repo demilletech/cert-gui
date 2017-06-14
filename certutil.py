@@ -1,6 +1,9 @@
 import OpenSSL.crypto
 from OpenSSL.crypto import load_certificate_request, FILETYPE_PEM
 
+from os import listdir, popen
+from os.path import isfile, join
+
 import certconfig
 import certsettings
 
@@ -38,6 +41,11 @@ def getCSRParams(cn):
     subject = req.get_subject()
     components = dict(subject.get_components())
     return components
+
+def getAllCSR():
+    csrdir = certsettings.settings['certRequestsDir']
+    onlyfiles = [f for f in listdir(csrdir) if isfile(join(csrdir, f))]
+    return onlyfiles
 
 def execute(command):
     return os.popen(command)
